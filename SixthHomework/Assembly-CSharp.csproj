@@ -60,10 +60,16 @@
     <Compile Include="Assets\Scripts\Follow.cs" />
     <Compile Include="Assets\Scripts\ShotEffects.cs" />
     <Compile Include="Assets\Scripts\Pointer.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\Enemy\MakeDamageOnCollision.cs" />
+    <Compile Include="Assets\Scripts\Enemy\TakeDamageOnCollision.cs" />
+    <Compile Include="Assets\Scripts\Loot\LootHeal.cs" />
     <Compile Include="Assets\Scripts\Head.cs" />
+    <Compile Include="Assets\Scripts\HealthUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PolygonParticles\Materials\SHARED BY LUXURYPANDA.txt" />
