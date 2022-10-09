@@ -57,6 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
+    <Compile Include="Assets\Drones\DroneController\Editor\CameraEditor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Drones\DroneController\Editor\DroneControllerEditorPlugin.dll" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -364,6 +368,12 @@
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="DroneControllerEditorPlugin">
+      <HintPath>Assets\Drones\DroneController\Editor\DroneControllerEditorPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="DroneControllerPlugin">
+      <HintPath>Assets\Drones\DroneController\Plugins\DroneController\DroneControllerPlugin.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>

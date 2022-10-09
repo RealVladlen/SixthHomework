@@ -6,7 +6,7 @@ public class Follow : MonoBehaviour
     [SerializeField] float _lerpRate;
     [SerializeField] Vector3 _offset;  
 
-    void Update()
+    void LateUpdate()
     {
         transform.position = Vector3.Lerp(transform.position, _target.position, Time.deltaTime * _lerpRate);    
     }

@@ -60,21 +60,30 @@
     <Compile Include="Assets\Scripts\Follow.cs" />
     <Compile Include="Assets\Scripts\ShotEffects.cs" />
     <Compile Include="Assets\Scripts\Pointer.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\HealthUI.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemy\MakeDamageOnCollision.cs" />
     <Compile Include="Assets\Scripts\Enemy\TakeDamageOnCollision.cs" />
     <Compile Include="Assets\Scripts\Loot\LootHeal.cs" />
-    <Compile Include="Assets\Scripts\Head.cs" />
-    <Compile Include="Assets\Scripts\HealthUI.cs" />
+    <Compile Include="Assets\Scripts\Player\Head.cs" />
+    <Compile Include="Assets\Scripts\DamageScreen.cs" />
+    <Compile Include="Assets\Scripts\Blink.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Rotate.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Carrot.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Dron.cs" />
+    <Compile Include="Assets\Scripts\Enemy\DronHealth.cs" />
+    <Compile Include="Assets\Scripts\Enemy\TakeDamageOnCollisionDron.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PolygonParticles\Materials\SHARED BY LUXURYPANDA.txt" />
     <None Include="Assets\Resources\SimpleSky\ReadMe.txt" />
     <None Include="Assets\Resources\Customizable Skybox\Stylized Sky\Shaders\Stylized Sky.shader" />
+    <None Include="Assets\Drones\DroneController\Plugins\DroneController\DroneControllerPlugin.dll" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -343,6 +352,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="DroneControllerPlugin">
+      <HintPath>Assets\Drones\DroneController\Plugins\DroneController\DroneControllerPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
