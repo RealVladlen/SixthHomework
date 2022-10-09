@@ -5,7 +5,7 @@ public class Pointer : MonoBehaviour
     [SerializeField] Transform _aim;
     [SerializeField] Camera _camera;
 
-    private void Update()
+    private void LateUpdate()
     {
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 

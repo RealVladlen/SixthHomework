@@ -41,21 +41,22 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         float speedMultiplier = 1f;
+        {
+            if (!_grounded)
+            {
+                speedMultiplier = 0.1f;
+                if (_rb.velocity.x > _maxSpeed && Input.GetAxis("Horizontal") > 0)
+                    speedMultiplier = 0;
 
-        if (!_grounded)
-            speedMultiplier = 0.1f;
+                if (_rb.velocity.x < -_maxSpeed && Input.GetAxis("Horizontal") < 0)
+                    speedMultiplier = 0;
+            }
 
-        if (_rb.velocity.x > _maxSpeed && Input.GetAxis("Horizontal") > 0)
-            speedMultiplier = 0;
+            _rb.AddForce(Input.GetAxis("Horizontal") * _moveSpeed * speedMultiplier, 0, 0, ForceMode.VelocityChange);
 
-        if (_rb.velocity.x < -_maxSpeed && Input.GetAxis("Horizontal") < 0)
-            speedMultiplier = 0;
-
-        _rb.AddForce(Input.GetAxis("Horizontal") * _moveSpeed * speedMultiplier, 0, 0, ForceMode.VelocityChange);
-
-        if (_grounded)
-            _rb.AddForce(-_rb.velocity.x * _friction, 0, 0, ForceMode.VelocityChange);
-
+            if (_grounded)
+                _rb.AddForce(-_rb.velocity.x * _friction, 0, 0, ForceMode.VelocityChange);
+        }
     }
 
     private void OnCollisionStay(Collision collision)
