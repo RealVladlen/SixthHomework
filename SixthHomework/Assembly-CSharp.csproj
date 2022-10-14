@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Follow.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\RocketCreator.cs" />
     <Compile Include="Assets\Scripts\Enemy\Dron.cs" />
     <Compile Include="Assets\Scripts\ShotEffects.cs" />
     <Compile Include="Assets\Scripts\Pointer.cs" />
@@ -70,14 +71,18 @@
     <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\Enemy\DronAnimator.cs" />
     <Compile Include="Assets\Scripts\HealthUI.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemy\MakeDamageOnCollision.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Carrot.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Rocket.cs" />
     <Compile Include="Assets\Scripts\Enemy\TakeDamageOnCollision.cs" />
     <Compile Include="Assets\Scripts\Loot\LootHeal.cs" />
     <Compile Include="Assets\Scripts\Enemy\DronHealth.cs" />
     <Compile Include="Assets\Scripts\Player\Head.cs" />
+    <Compile Include="Assets\Scripts\Enemy\TakeDamageOnTrigger.cs" />
+    <Compile Include="Assets\Scripts\Enemy\MakeDamageOnTrigger.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyHealthController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PolygonParticles\Materials\SHARED BY LUXURYPANDA.txt" />
@@ -731,11 +736,17 @@
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
@@ -838,6 +849,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
