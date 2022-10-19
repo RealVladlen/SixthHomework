@@ -7,7 +7,7 @@ public class Dron : MonoBehaviour
     [SerializeField] float _speed;
     [SerializeField] float _timeToReachSpeed;
 
-    [SerializeField] ParticleSystem _fire;
+    [SerializeField] List<ParticleSystem> _fire;
     [SerializeField] List<ParticleSystem> _smoke;
 
     private Transform _playerTransform;
@@ -32,8 +32,19 @@ public class Dron : MonoBehaviour
         }
     }
 
+    public void UpdateHP(int currentHP)
+    {
+        if (currentHP == 2)
+            StartSmoke();
+        if (currentHP == 1)
+            StartFire();
+    }
+
     public void StartFire()
     {
-        _fire.Play();
+        for (int i = 0; i < _fire.Count; i++)
+        {
+            _fire[i].Play();
+        }
     }
 }

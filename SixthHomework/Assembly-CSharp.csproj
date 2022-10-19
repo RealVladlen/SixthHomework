@@ -61,11 +61,15 @@
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Enemy\RocketCreator.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyHealthController.cs" />
     <Compile Include="Assets\Scripts\Enemy\Dron.cs" />
     <Compile Include="Assets\Scripts\ShotEffects.cs" />
     <Compile Include="Assets\Scripts\Pointer.cs" />
-    <Compile Include="Assets\Scripts\Enemy\TakeDamageOnCollisionDron.cs" />
+    <Compile Include="Assets\Scripts\Enemy\SmallRocket.cs" />
+    <Compile Include="Assets\Scripts\Enemy\RotateToEnemmy.cs" />
+    <Compile Include="Assets\Scripts\Enemy\SmallRocketCreator.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\SoundController.cs" />
     <Compile Include="Assets\Scripts\DamageScreen.cs" />
     <Compile Include="Assets\Scripts\Blink.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
@@ -74,15 +78,13 @@
     <Compile Include="Assets\Scripts\Enemy\DronAnimator.cs" />
     <Compile Include="Assets\Scripts\HealthUI.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
-    <Compile Include="Assets\Scripts\Enemy\MakeDamageOnCollision.cs" />
+    <Compile Include="Assets\Scripts\Enemy\MakeDamageOnEnter.cs" />
     <Compile Include="Assets\Scripts\Enemy\Rocket.cs" />
-    <Compile Include="Assets\Scripts\Enemy\TakeDamageOnCollision.cs" />
+    <Compile Include="Assets\Scripts\Enemy\TakeDamageOnEnter.cs" />
     <Compile Include="Assets\Scripts\Loot\LootHeal.cs" />
     <Compile Include="Assets\Scripts\Enemy\DronHealth.cs" />
     <Compile Include="Assets\Scripts\Player\Head.cs" />
-    <Compile Include="Assets\Scripts\Enemy\TakeDamageOnTrigger.cs" />
-    <Compile Include="Assets\Scripts\Enemy\MakeDamageOnTrigger.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyHealthController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Grenade.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PolygonParticles\Materials\SHARED BY LUXURYPANDA.txt" />

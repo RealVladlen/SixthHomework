@@ -15,10 +15,6 @@ public class DronHealth : MonoBehaviour
         _health -= damageValue;
         if (_health <= 0)
             Die();
-        if (_health == 2)
-            _dron.StartSmoke();
-        if (_health == 1)
-            _dron.StartFire();
 
         EventOnTakeDamage.Invoke();
         Instantiate(_takeDamage, transform.position, Quaternion.identity).Play();

@@ -8,17 +8,17 @@ public class EnemyHealth : MonoBehaviour
 
     private AudioSource _explosion;
 
-    public UnityEvent EventOnTakeDamage;
+    public UnityEvent<int> EventOnTakeDamage;
 
     public void TakeDamage(int damageValue)
     {
         _health -= damageValue;
         if (_health <= 0)
             Die();
-        EventOnTakeDamage.Invoke();
-        ParticleSystem effect = Instantiate(_takeDamage, transform.position, Quaternion.identity);
-        effect.gameObject.transform.localScale = new Vector3(2, 2, 2);
-        effect.Play();
+        else
+            EventOnTakeDamage.Invoke(_health);
+
+        CreateDamageEffect();
     }
 
     private void Die()
@@ -28,6 +28,15 @@ public class EnemyHealth : MonoBehaviour
         _explosion = EnemyHealthController.Instance.GetExplosionAudioTransform();
         AudioSource explosion = Instantiate(_explosion, transform.position, Quaternion.identity);
         explosion.Play();
-        Destroy(explosion.gameObject, 2);
+        Destroy(explosion.gameObject, explosion.clip.length);
+    }
+
+    private void CreateDamageEffect()
+    {
+        if (!_takeDamage) return;
+
+        ParticleSystem effect = Instantiate(_takeDamage, transform.position, Quaternion.identity);
+        effect.transform.localScale = new Vector3(2, 2, 2);
+        effect.Play();
     }
 }

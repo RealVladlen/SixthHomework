@@ -12,6 +12,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Blink _blink;
 
     public UnityEvent EventOnTakeDamage;
+    public int Health => _health;
+    public int MaxHealth => _maxHealth;
+
 
     private bool _invulnerable;
 
@@ -31,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
                 Die();
 
             _invulnerable = true;
-            Invoke("StopInvulnerable", 1);
+            Invoke(nameof(StopInvulnerable), 1);
             _healthUI.DisplayHealth(_health);
             EventOnTakeDamage.Invoke();
         }

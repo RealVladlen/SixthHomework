@@ -7,6 +7,7 @@ public class RocketCreator : MonoBehaviour
 
     public void Create()
     {
-        Instantiate(_rocketPrefab, _spawnTransform.position, Quaternion.identity);
+        Rocket newRocket = Instantiate(_rocketPrefab, _spawnTransform.position, Quaternion.identity);
+        Destroy(newRocket, 5);
     }
 }

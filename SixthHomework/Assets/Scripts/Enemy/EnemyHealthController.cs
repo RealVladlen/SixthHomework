@@ -3,11 +3,15 @@ using UnityEngine;
 public class EnemyHealthController : MonoBehaviour
 {
     #region Синглтон
-    public static EnemyHealthController Instance;
+    public static EnemyHealthController Instance { get; private set; }
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance)
+            Destroy(gameObject);
+
+        else
+            Instance = this;
     }
     #endregion
 

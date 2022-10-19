@@ -6,12 +6,11 @@ public class LootHeal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerHealth playerHealth = other.attachedRigidbody.GetComponent<PlayerHealth>();
-
-        if (playerHealth)
-        {
-            playerHealth.AddHealth(_healthValue);
-            Destroy(gameObject);
-        }
+        if (other.attachedRigidbody.GetComponent<PlayerHealth>() is PlayerHealth playerHealth)
+            if(playerHealth.Health < playerHealth.MaxHealth)
+            {
+                playerHealth.AddHealth(_healthValue);
+                Destroy(gameObject);
+            }
     }
 }
