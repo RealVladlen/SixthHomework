@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Enemy\RocketCreator.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealthController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\BatchPrefabCreator.cs" />
     <Compile Include="Assets\Scripts\Enemy\Dron.cs" />
     <Compile Include="Assets\Scripts\ShotEffects.cs" />
     <Compile Include="Assets\Scripts\Pointer.cs" />
@@ -81,15 +82,26 @@
     <Compile Include="Assets\Scripts\Enemy\MakeDamageOnEnter.cs" />
     <Compile Include="Assets\Scripts\Enemy\Rocket.cs" />
     <Compile Include="Assets\Scripts\Enemy\TakeDamageOnEnter.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Grenade.cs" />
     <Compile Include="Assets\Scripts\Loot\LootHeal.cs" />
+    <Compile Include="Assets\Scripts\RayGizmo.cs" />
     <Compile Include="Assets\Scripts\Enemy\DronHealth.cs" />
     <Compile Include="Assets\Scripts\Player\Head.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Grenade.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Walker.cs" />
+    <Compile Include="Assets\Scripts\Enemy\RotateToTargetEuler.cs" />
+    <Compile Include="Assets\Scripts\EnemySetActive.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Resources\PolygonSciFiSpace\Shaders\SyntyStudios_Asteroid.shader" />
     <None Include="Assets\PolygonParticles\Materials\SHARED BY LUXURYPANDA.txt" />
+    <None Include="Assets\Resources\PolygonSciFiSpace\Shaders\POLYGON_Triplanar.shader" />
+    <None Include="Assets\Resources\PolygonSciFiSpace\Shaders\SyntyStudios_Triplanar_ObjectSpace.shader" />
     <None Include="Assets\Resources\SimpleSky\ReadMe.txt" />
+    <None Include="Assets\Resources\PolygonBattleRoyale\Shader\DamageZone.shader" />
+    <None Include="Assets\Resources\PolygonSciFiSpace\Shaders\SyntyStudios_Planet.shader" />
     <None Include="Assets\Resources\Customizable Skybox\Stylized Sky\Shaders\Stylized Sky.shader" />
+    <None Include="Assets\Resources\PolygonSciFiSpace\Shaders\SyntyStudios_Planet_Lines.shader" />
+    <None Include="Assets\Resources\PolygonSciFiSpace\Shaders\POLYGON_SpaceShip_Rim.shader" />
     <None Include="Assets\Drones\DroneController\Plugins\DroneController\DroneControllerPlugin.dll" />
   </ItemGroup>
   <ItemGroup>

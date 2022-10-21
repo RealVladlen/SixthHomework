@@ -4,6 +4,7 @@ public class ShotEffects : MonoBehaviour
 {
     void Start()
     {
-        Destroy(gameObject,1f);
+        ParticleSystem particle = GetComponent<ParticleSystem>();
+        Destroy(gameObject, particle.duration);
     }
 }
