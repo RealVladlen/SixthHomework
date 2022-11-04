@@ -6,9 +6,22 @@ public class SmallRocketCreator : MonoBehaviour
     [SerializeField] SmallRocket _rocketPrefab;
     [SerializeField] Transform _spawnTransform;
 
+    private Coroutine _coroutine;
+
     private void Start()
     {
-        StartCoroutine(ShootTimer());
+        _coroutine = StartCoroutine(ShootTimer());
+    }
+
+    private void OnEnable()
+    {
+        _coroutine = StartCoroutine(ShootTimer());
+    }
+
+    private void OnDisable()
+    {
+        if (_coroutine != null)
+            StopCoroutine(_coroutine);
     }
 
     public void Create()
@@ -18,10 +31,12 @@ public class SmallRocketCreator : MonoBehaviour
 
     IEnumerator ShootTimer()
     {
-        yield return new WaitForSeconds(3);
 
-        Create();
+        while (true)
+        {
+            yield return new WaitForSeconds(3);
 
-        StartCoroutine(ShootTimer());
+            Create();
+        }
     }
 }

@@ -163,6 +163,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  EventOnDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3609836015087422639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +234,7 @@ MonoBehaviour:
   - {fileID: 4117920648280863101}
   - {fileID: 4117920648855805948}
   - {fileID: 4117920648588119133}
+  _enemyHealth: {fileID: 1306331938406340183}
 --- !u!153 &4316557192876919157
 ConfigurableJoint:
   m_ObjectHideFlags: 0

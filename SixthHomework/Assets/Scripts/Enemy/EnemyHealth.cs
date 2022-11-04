@@ -9,6 +9,12 @@ public class EnemyHealth : MonoBehaviour
     private AudioSource _explosion;
 
     public UnityEvent<int> EventOnTakeDamage;
+    public UnityEvent EventOnDie;
+
+    private void Start()
+    {
+        EnemySetActive.Instance.SetEnemy(this.gameObject);
+    }
 
     public void TakeDamage(int damageValue)
     {
@@ -29,6 +35,8 @@ public class EnemyHealth : MonoBehaviour
         AudioSource explosion = Instantiate(_explosion, transform.position, Quaternion.identity);
         explosion.Play();
         Destroy(explosion.gameObject, explosion.clip.length);
+
+        EventOnDie.Invoke();
     }
 
     private void CreateDamageEffect()

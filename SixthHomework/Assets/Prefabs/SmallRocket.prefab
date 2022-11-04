@@ -28,8 +28,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2418653158144855649}
-  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.56, y: 1.16, z: 0}
+  m_LocalRotation: {x: 0.49999997, y: 0.50000006, z: 0.49999997, w: 0.5000001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -38,7 +38,7 @@ Transform:
   - {fileID: 252500764135064162}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!114 &2418653158144855648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,6 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 4
   _rotationSpeed: 1
+  _enemyHealth: {fileID: -3678535169500975855}
+  _particleSystem: {fileID: 430352568060809190}
 --- !u!114 &6752650367634795165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,6 +84,9 @@ MonoBehaviour:
   _takeDamage: {fileID: 198633821086180066, guid: 101d62f0a3e4fef4eab61adb79c845df,
     type: 3}
   EventOnTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  EventOnDie:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &3817688731127641541
@@ -247,6 +252,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d375605610a4e84d8e1d80a70c9340a, type: 3}
+--- !u!198 &430352568060809190 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198922435788909546, guid: 2d375605610a4e84d8e1d80a70c9340a,
+    type: 3}
+  m_PrefabInstance: {fileID: 520831544143422476}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &516307417660566630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4529282608138346, guid: 2d375605610a4e84d8e1d80a70c9340a,

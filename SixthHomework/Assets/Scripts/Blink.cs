@@ -17,9 +17,7 @@ public class Blink : MonoBehaviour
             SetColor(new Color(Mathf.Sin(t * 30) * 0.5f + 0.5f, 0, 0, 0));
             yield return null;
         }
-
         SetColor(Color.clear);
-
     }
 
     private void SetColor(Color color)

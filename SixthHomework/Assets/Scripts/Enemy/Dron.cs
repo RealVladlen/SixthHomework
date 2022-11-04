@@ -10,11 +10,14 @@ public class Dron : MonoBehaviour
     [SerializeField] List<ParticleSystem> _fire;
     [SerializeField] List<ParticleSystem> _smoke;
 
+    [SerializeField] EnemyHealth _enemyHealth;
+
     private Transform _playerTransform;
 
     private void Start()
     {
         _playerTransform = PlayerController.Instance.GetPlayerTransform();
+        _enemyHealth.EventOnDie.AddListener(Die);
     }
 
     private void FixedUpdate()
@@ -45,6 +48,22 @@ public class Dron : MonoBehaviour
         for (int i = 0; i < _fire.Count; i++)
         {
             _fire[i].Play();
+        }
+    }
+
+    public void Die()
+    {
+        for (int i = 0; i < _fire.Count; i++)
+        {
+            _fire[i].Stop();
+            _fire[i].transform.parent = null;
+            Destroy(_fire[i].gameObject,4);
+        }
+        for (int i = 0; i < _smoke.Count; i++)
+        {
+            _smoke[i].Stop();
+            _smoke[i].transform.parent = null;
+            Destroy(_smoke[i].gameObject, 4);
         }
     }
 }
